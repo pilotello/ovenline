@@ -1,0 +1,488 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- Name: ZoneType
+  Id: g=55da1f498afa51ea9c6459a256732605
+  Supertype: BaseObjectType
+  Children:
+  - Name: PV
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: SP
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Output
+    Type: BaseDataVariableType
+    DataType: Float
+- Name: DayType
+  Id: g=fb5ade5fef6f561b8a828bf28e396e4c
+  Supertype: BaseObjectType
+  Children:
+  - Name: Enabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: StartMinutes
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: DayName
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: StartText
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ReadyText
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: IsToday
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: Oven
+  Type: FolderType
+  Children:
+  - Name: Zones
+    Type: FolderType
+    Children:
+    - Name: Z1
+      Type: ZoneType
+      Children:
+      - Name: PV
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 425.0
+      - Name: SP
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 425.0
+      - Name: Output
+        Type: BaseDataVariableType
+        DataType: Float
+    - Name: Z2
+      Type: ZoneType
+      Children:
+      - Name: PV
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 450.0
+      - Name: SP
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 450.0
+      - Name: Output
+        Type: BaseDataVariableType
+        DataType: Float
+    - Name: Z3
+      Type: ZoneType
+      Children:
+      - Name: PV
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 460.0
+      - Name: SP
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 460.0
+      - Name: Output
+        Type: BaseDataVariableType
+        DataType: Float
+    - Name: Z4
+      Type: ZoneType
+      Children:
+      - Name: PV
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 450.0
+      - Name: SP
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 450.0
+      - Name: Output
+        Type: BaseDataVariableType
+        DataType: Float
+    - Name: Z5
+      Type: ZoneType
+      Children:
+      - Name: PV
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 430.0
+      - Name: SP
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 430.0
+      - Name: Output
+        Type: BaseDataVariableType
+        DataType: Float
+  - Name: Belt
+    Type: FolderType
+    Children:
+    - Name: SpeedFtMin
+      Type: BaseDataVariableType
+      DataType: Float
+      Value: 6.8
+    - Name: BakeTimeMin
+      Type: BaseDataVariableType
+      DataType: Float
+      Value: 14.0
+    - Name: Running
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+  - Name: Product
+    Type: FolderType
+    Children:
+    - Name: Name
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Sandwich loaf 20 oz"
+    - Name: Code
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "SL20"
+  - Name: Run
+    Type: FolderType
+    Children:
+    - Name: Number
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "2026-1049"
+    - Name: StartText
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "12:44 PM"
+    - Name: State
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "BAKING"
+    - Name: Units
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 520
+  - Name: Alarms
+    Type: FolderType
+    Children:
+    - Name: ExhaustAirflowLow
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: InletDoorOpen
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: BeltSpeedDeviation
+      Type: BaseDataVariableType
+      DataType: Boolean
+- Name: HMI
+  Type: FolderType
+  Children:
+  - Name: Header
+    Type: FolderType
+    Children:
+    - Name: ClockDate
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: ClockTime
+      Type: BaseDataVariableType
+      DataType: String
+  - Name: Status
+    Type: FolderType
+    Children:
+    - Name: Running
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: LineText
+      Type: BaseDataVariableType
+      DataType: String
+  - Name: Schedule
+    Id: g=108464557da6580d95a9a3b0bb3128f5
+    Type: FolderType
+    Children:
+    - Name: Day1
+      Id: g=4f7c9929ffc75141876e3b2dc546b1a6
+      Type: DayType
+      Children:
+      - Name: Enabled
+        Id: g=f2bcc92091fa5c70a106d94214582f30
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: StartMinutes
+        Id: g=fa33b043e64b58cc80756e961987cbd8
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 210
+      - Name: DayName
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: StartText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: ReadyText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: IsToday
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: Day2
+      Id: g=efc602eef1ce593daa03ddecf39610fa
+      Type: DayType
+      Children:
+      - Name: Enabled
+        Id: g=d30cffc2a97251a2bbbe15e3b7de2650
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: StartMinutes
+        Id: g=973c6c816e475105a423d8c4f71b89fd
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 210
+      - Name: DayName
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: StartText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: ReadyText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: IsToday
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: Day3
+      Id: g=1ed4903335425369aa7f1a58ab53cf9a
+      Type: DayType
+      Children:
+      - Name: Enabled
+        Id: g=943beef433a956f9acfa065d80e64c15
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: StartMinutes
+        Id: g=658ea75cce725056914a0b64e17f3544
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 210
+      - Name: DayName
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: StartText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: ReadyText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: IsToday
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: Day4
+      Id: g=9563d2bac6fa537695de41b9e4ece0d9
+      Type: DayType
+      Children:
+      - Name: Enabled
+        Id: g=cc2d3160523d5990a4335e0cad991218
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: StartMinutes
+        Id: g=c2900c94ef6d5aad8c51518cd6c73b87
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 210
+      - Name: DayName
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: StartText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: ReadyText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: IsToday
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: Day5
+      Id: g=322ec489dde05beca08bd95eb45b1e52
+      Type: DayType
+      Children:
+      - Name: Enabled
+        Id: g=03408c8e8d3f54628793de41b191d9ff
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: StartMinutes
+        Id: g=95f7b22d50b554f3bce13af84056ec77
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 225
+      - Name: DayName
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: StartText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: ReadyText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: IsToday
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: Day6
+      Id: g=f3ef15bf35c7511fad0484dd9fcbad14
+      Type: DayType
+      Children:
+      - Name: Enabled
+        Id: g=26842eca0b165ea0b0f8c4a79c23c41f
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: StartMinutes
+        Id: g=9aec06d0d57c5465b7bfd13fae55c1aa
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 300
+      - Name: DayName
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: StartText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: ReadyText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: IsToday
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: Day7
+      Id: g=43dd7c47e6d3517099818f2115a5d29c
+      Type: DayType
+      Children:
+      - Name: Enabled
+        Id: g=a16121a94b935a5c8bd3cbfee168a718
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+      - Name: StartMinutes
+        Id: g=e05d0adbdd1050ed89934557893d83d2
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 360
+      - Name: DayName
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: StartText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: ReadyText
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: IsToday
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: WarmupMin
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 75
+    - Name: TimeZoneText
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: NextStartText
+      Type: BaseDataVariableType
+      DataType: String
+  - Name: History
+    Type: FolderType
+    Children:
+    - Name: Search
+      Type: BaseDataVariableType
+      DataType: String
+      Value: ""
+    - Name: RangeDays
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 30
+    - Name: Product
+      Type: BaseDataVariableType
+      DataType: String
+      Value: ""
+    - Name: GridQuery
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "SELECT rowid AS RunId, * FROM BakeRuns ORDER BY Timestamp DESC"
+    - Name: SelectedRunId
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: SelEndTime
+      Type: BaseDataVariableType
+      DataType: UtcTime
+    - Name: SelRun
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SelProduct
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SelStart
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SelEnd
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SelRunTime
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SelBake
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SelUnits
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SelMaxDev
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: SelResult
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: CountText
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: StatsText
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: ExportText
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: Range7Style
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: Range30Style
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: RangeAllStyle
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: ProductAllStyle
+      Type: BaseDataVariableType
+      DataType: String
+  - Name: Alarms
+    Type: FolderType
+    Children:
+    - Name: Count
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: ButtonText
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "ALARMS"
+    - Name: ButtonStyle
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "AlarmIdle"
+    - Name: ExhaustAirflowLowState
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "NORMAL"
+    - Name: InletDoorOpenState
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "NORMAL"
+    - Name: BeltSpeedDeviationState
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "NORMAL"

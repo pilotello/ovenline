@@ -1,0 +1,7 @@
+# Written by Studio when it builds the NetLogic solution or exports the project
+OvenLine2/ProjectFiles/NetSolution/bin/
+OvenLine2/ProjectFiles/NetSolution/obj/
+OvenLine2/ProjectFiles/NetSolution/Private/
+OvenLine2/ProjectFiles/UserDefinedModule.xml
+OvenLine2/*.optix.design
+__pycache__/

@@ -1,0 +1,2 @@
+# Keep every file byte for byte: Optix project files are CRLF, and a build must match a clone.
+* -text

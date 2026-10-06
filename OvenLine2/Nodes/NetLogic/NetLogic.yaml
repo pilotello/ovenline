@@ -1,0 +1,17 @@
+Name: NetLogic
+Type: NetLogicCategoryFolder
+Children:
+- Name: OvenSimulation
+  Type: NetLogic
+- Name: RunJournal
+  Type: NetLogic
+- Name: HistoryFilter
+  Type: NetLogic
+- Name: CsvExport
+  Type: NetLogic
+- Name: PreheatPlanner
+  Type: NetLogic
+- Name: AlarmBadge
+  Type: NetLogic
+- Name: HeaderClock
+  Type: NetLogic
